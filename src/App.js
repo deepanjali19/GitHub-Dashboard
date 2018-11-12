@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import user from './user.js';
+import API from './services/api.js';
+
 class App extends Component {
 state = {
 	user: {}

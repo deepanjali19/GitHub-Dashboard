@@ -10,9 +10,30 @@ This app tracks the user activities on GitHub and presents the statistics of the
 
 It also shows recommendations for future projects and bugs, the user can work on.
 
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
+### Installing
 
-Need to get in contact with other collaborators? Feel free to [join our slack group!](https://join.slack.com/t/githubdashboard/shared_invite/enQtNDcxMTM5OTMyNjExLWFmYTE1NTFiMzkyMzU0ZmRjMjI0YjI1OTVkMDk0MTUyZmJlMjM2NGUzODQ1YjZmZDVkMzkxYzgzYjM1MjI1ZGI) 
+[Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) the repository onto your computer.
+Then run the following commands to get the app working locally on your machine:
+
+```
+npm install
+npm start
+```
+
+This will build the project and automatically start the development server on [http://localhost:3000](http://localhost:3000).
+
+## Contributing
+
+New contributors are always welcome!
+
+Need to contact other collaborators in this project? Feel free to [join our slack group!](https://join.slack.com/t/githubdashboard/shared_invite/enQtNDcxMTM5OTMyNjExLWFmYTE1NTFiMzkyMzU0ZmRjMjI0YjI1OTVkMDk0MTUyZmJlMjM2NGUzODQ1YjZmZDVkMzkxYzgzYjM1MjI1ZGI) 
+
+## Liscense
+
+This project is licensed under the MIT License - see our [LICENSE.md](https://github.com/deepanjali19/GitHub-Dashboard/blob/master/LICENSE) file for details
 
 ## V1 Features
 A list of features we want to have completed for this first version of the project. If you think of anything feel free to add it, or bring up any concerns about existing features in our [slack](https://githubdashboard.slack.com) group or in a new [issue](https://github.com/deepanjali19/GitHub-Dashboard/issues/new).

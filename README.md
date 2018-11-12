@@ -42,3 +42,4 @@ Nice to haves that would benefit the development of the project
 - Create page mock-ups for front end
 - Set up testing environment
 - Make site responsive
+

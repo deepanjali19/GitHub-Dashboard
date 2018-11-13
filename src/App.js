@@ -6,14 +6,21 @@ import GitHubImage from './img/GitHub-Logo.svg';
 
 class App extends Component {
 	
-	
-	
 	state = {}
 
   render() {
 		
 		const api = new API();
-		api.getRecentRepoActivity("dillionverma", "github-issues-explorer");
+		
+		var labels = ['enhancement'];
+
+		api.getIssuesMatchingLabels("deepanjali19", "GitHub-Dashboard", labels)
+		.then(function(result){
+		   console.log(result);
+		})
+		.catch(function (error){
+		   console.log(error);
+		});
 
     return (
       <div className="App">

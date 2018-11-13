@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import API from './services/api.js';
 import GitHubImage from './img/GitHub-Logo.svg';
 
 class App extends Component {

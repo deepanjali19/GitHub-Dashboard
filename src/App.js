@@ -9,8 +9,6 @@ class App extends Component {
 	state = {}
 
   render() {
-  	
-		const { user } = this.state;
 
     return (
       <div className="App">
@@ -18,9 +16,7 @@ class App extends Component {
         <header className="App-header">
 			   	<h2> GitHub-Dashboard </h2>
 
-			 		<form action="https://github.com">
-			    	<input className="github" type="submit" value="Login on GitHubs Website" />
-					</form>
+			 		<input className="github" type="submit" value="Login to Github" />
 					
         </header>
       </div>

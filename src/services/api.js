@@ -1,8 +1,8 @@
 import config from "../config";
+import { API_PATH } from "../constants";
 
 const octokit = require('@octokit/rest')()
 
-const API_PATH = "https://api.github.com/";
 
 octokit.authenticate({
   type: 'oauth',

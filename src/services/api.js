@@ -4,20 +4,28 @@ import config from "../config";
 
 const octokit = require('@octokit/rest')()
 
+const API_PATH = "https://api.github.com/";
+
 octokit.authenticate({
   type: 'oauth',
   token: config.access_token
 })
 
-console.log(config);
-
 export default class API {
-  // private readonly locale: Locale.State;
-  // private readonly user: User.State;
 
-  constructor(locale: Locale.State, user: User.State) {
-    this.locale = locale;
-    this.user = user;
+  constructor() {
+
   }
+  
+  async getRecentRepoActivity(owner: string, repo:string) {
+    // return this.fetch(`${API_PATH}/skipped_sentences/` + id, {
+    //   method: 'POST',
+    // });
+    const result = await octokit.activity.getEventsForRepo({owner, repo})
+    console.log(result);
+  }
+  
+  
+  //get most recent activity for user.
 
 }

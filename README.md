@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) the repository onto your computer.
 
-[Generate a github API access_token](https://github.com/settings/tokens) with repo permissions and put that key in `config.json`. Then run the following commands to get the app working locally on your machine:
+[Generate a github API access_token](https://github.com/settings/tokens) with repo permissions (but generate a new key with more permissions if the situation calls for it) and put that key in `config.json`. Then run the following commands to get the app working locally on your machine:
 
 ```
 npm install

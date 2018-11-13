@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import API from './services/api.js';
 import GitHubImage from './img/GitHub-Logo.svg';
 
 class App extends Component {
 	
+	
+	
 	state = {}
 
   render() {
+		
+		const api = new API();
+		api.getRecentRepoActivity("dillionverma", "github-issues-explorer");
 
     return (
       <div className="App">

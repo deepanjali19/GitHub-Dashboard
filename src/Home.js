@@ -13,14 +13,14 @@ class Home extends React.Component {
                             <a className="navbar-brand" href="#">
                                 <span id="dashboard">GitHub-Dashboard</span>
                             </a>
-                            <a href="#" class="navbar-left"><img src={GitHubImage} height="70" alt="GitHub Logo" /></a>
+                            <a href="#" className="navbar-left"><img src={GitHubImage} height="70" alt="GitHub Logo" /></a>
                         </div>
-                        <ul class="nav navbar-nav">
+                        <ul className="nav navbar-nav">
                             <li><Link to="/">Home</Link></li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features
-                                <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
+                            <li className="dropdown">
+                                <a className="dropdown-toggle" data-toggle="dropdown" href="#">Features
+                                <span className="caret"></span></a>
+                                <ul className="dropdown-menu">
                                     <li><Link to="/CurrentIssues">CurrentIssues</Link></li>
                                     <li><Link to="/IssueCommentAmount">IssueCommentAmount</Link></li>
                                     <li><Link to="/IssueLabel">IssueLabel</Link></li>
@@ -33,8 +33,8 @@ class Home extends React.Component {
                                 </ul>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><span class="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
+                        <ul className="nav navbar-nav navbar-right">
+                            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><span className="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
                         </ul>
                     </div>
                 </nav>

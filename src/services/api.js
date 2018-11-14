@@ -1,12 +1,11 @@
 
 /*
 
-Contains functions that obtain data from Github API
-Each function returns a Promise
-The promise will then be handled in the calling function
+  This file contains functions that obtain data from Github API
+  Each function returns a Promise
 
-Purpose of these functions is to retrieve the value mentioned 
-in the function title, nothing more
+  Purpose of these functions is to retrieve the value mentioned 
+  in the function title, nothing more
 
 */
 
@@ -22,10 +21,6 @@ octokit.authenticate({
 })
 
 export default class API {
-
-  constructor() {
-
-  }
   
   //returns 30 most recent events in given repo
   async getRecentRepoActivity(owner: string, repo:string) {
@@ -40,7 +35,7 @@ export default class API {
     var issues = [];
     
     result.data.forEach((repoEvent) => {
-      if(repoEvent.type == "IssuesEvent") {
+      if(repoEvent.type === "IssuesEvent") {
         issues.push(repoEvent);
       }
     });
@@ -54,10 +49,8 @@ export default class API {
     const issues = await this.getRecentRepoIssues(owner, repo);
     var matches = [];
     
-    //console.log(issues);
-    
     issues.forEach((issue) => {
-      console.log(issue);
+
       var labels = issue.payload.issue.labels;
       labels.forEach((label) => {
         if (wantedLabels.includes(label.name)) {

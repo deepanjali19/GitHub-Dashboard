@@ -13,7 +13,7 @@ import RepoRecentActivity from './RepoRecentActivity';
 import TotalStars from './TotalStars';
 import UserRecentActivities from './UserRecentActivities';
 
-import API from './services/api.js';
+
 
 class App extends Component {
 	
@@ -21,18 +21,6 @@ class App extends Component {
 
   render() {
 		
-		const api = new API();
-		
-		var labels = ['enhancement'];
-
-		api.getIssuesMatchingLabels("deepanjali19", "GitHub-Dashboard", labels)
-		.then(function(result){
-		   console.log(result);
-		})
-		.catch(function (error){
-		   console.log(error);
-		});
-
 		return (
 			<Switch>
 				<Route exact path='/' render={() => (

@@ -26,9 +26,13 @@ npm start
 
 This will build the project and automatically start the development server on [http://localhost:3000](http://localhost:3000).
 
-For more information, see [CONTRIBUTING.md](https://github.com/deepanjali19/GitHub-Dashboard/blob/master/CONTRIBUTING.md)
+## Contributing
 
-## License
+New contributors are always welcome!
+
+Need to contact other collaborators in this project? Feel free to [join our slack group!](https://join.slack.com/t/githubdashboard/shared_invite/enQtNDcxMTM5OTMyNjExLWFmYTE1NTFiMzkyMzU0ZmRjMjI0YjI1OTVkMDk0MTUyZmJlMjM2NGUzODQ1YjZmZDVkMzkxYzgzYjM1MjI1ZGI) 
+
+## Liscense
 
 This project is licensed under the MIT License - see our [LICENSE.md](https://github.com/deepanjali19/GitHub-Dashboard/blob/master/LICENSE) file for details
 

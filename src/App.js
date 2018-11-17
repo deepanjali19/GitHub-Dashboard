@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+
 import { Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import CurrentIssues from './CurrentIssues';
@@ -11,11 +13,14 @@ import RepoRecentActivity from './RepoRecentActivity';
 import TotalStars from './TotalStars';
 import UserRecentActivities from './UserRecentActivities';
 
-class App extends Component {
 
+
+class App extends Component {
+	
 	state = {}
 
-	render() {
+  render() {
+		
 		return (
 			<Switch>
 				<Route exact path='/' render={() => (

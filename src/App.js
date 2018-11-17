@@ -14,11 +14,15 @@ import TotalStars from './TotalStars';
 import UserRecentActivities from './UserRecentActivities';
 
 
-
 class App extends Component {
 	
 	state = {}
-
+	componentDidMount() {
+        const code =
+		window.location.href.match(/\?code=(.*)/) &&
+		window.location.href.match(/\?code=(.*)/)[1];
+        
+      }
   render() {
 		
 		return (

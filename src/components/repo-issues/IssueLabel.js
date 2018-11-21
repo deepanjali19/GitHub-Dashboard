@@ -1,6 +1,6 @@
 import React from 'react';
 
-import API from './services/api.js';
+import API from '../../services/api.js';
 
 class IssueLabel extends React.Component {
   

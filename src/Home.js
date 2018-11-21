@@ -24,14 +24,10 @@ class Home extends React.Component {
                                 <a className="dropdown-toggle" data-toggle="dropdown" href="#">Features
                                 <span className="caret"></span></a>
                                 <ul className="dropdown-menu">
-                                    <li><Link to="/CurrentIssues">CurrentIssues</Link></li>
-                                    <li><Link to="/IssueCommentAmount">IssueCommentAmount</Link></li>
                                     <li><Link to="/IssueLabel">IssueLabel</Link></li>
                                     <li><Link to="/LanguageList">LanguageList</Link></li>
                                     <li><Link to="/PieChart">PieChart</Link></li>
-                                    <li><Link to="/RelatingComments">RelatingComments</Link></li>
                                     <li><Link to="/RepoRecentActivity">RepoRecentActivity</Link></li>
-                                    <li><Link to="/TotalStars">TotalStars</Link></li>
                                     <li><Link to="/UserRecentActivities">UserRecentActivities</Link></li>
                                 </ul>
                             </li>

@@ -3,6 +3,9 @@ import GitHubImage from './img/GitHub.png';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
+const CLIENT_ID = 'c6b85184ff709b73b677'
+const REDIRECT_URI = 'http://localhost:3000/'
+
 class Home extends React.Component {
     render() {
         return (
@@ -33,8 +36,8 @@ class Home extends React.Component {
                                 </ul>
                             </li>
                         </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><span className="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
+                        <ul className='nav navbar-nav navbar-right'>
+                            <li><a href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`} target="_blank" rel="noopener noreferrer"><span className="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
                         </ul>
                     </div>
                 </nav>

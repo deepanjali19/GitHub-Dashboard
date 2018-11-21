@@ -1,6 +1,8 @@
 # GitHub-Dashboard
 A web based GitHub Dashboard for Seneca students working on Open Source Development.
 
+![](https://thumbs.gfycat.com/FlawedAdorableEasternnewt-size_restricted.gif)
+
 This app tracks the user activities on GitHub and presents the statistics of the following:
 
 - Issues

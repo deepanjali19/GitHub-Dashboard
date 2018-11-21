@@ -1,8 +1,6 @@
 # GitHub-Dashboard
 A web based GitHub Dashboard for Seneca students working on Open Source Development.
 
-![](https://thumbs.gfycat.com/FlawedAdorableEasternnewt-size_restricted.gif)
-
 This app tracks the user activities on GitHub and presents the statistics of the following:
 
 - Issues
@@ -36,6 +34,10 @@ This project is licensed under the MIT License - see our [LICENSE.md](https://gi
 
 ## V1 Features
 A list of features we want to have completed for this first version of the project. If you think of anything feel free to add it, or bring up any concerns about existing features in our [slack](https://githubdashboard.slack.com) group or in a new [issue](https://github.com/deepanjali19/GitHub-Dashboard/issues/new).
+
+![](https://thumbs.gfycat.com/FlawedAdorableEasternnewt-size_restricted.gif)
+
+Above is an early prototype of the project. To view project mockups click [here](https://imgur.com/a/UsBGvEJ).
 
 ### General Features
 More general features present throughout the application

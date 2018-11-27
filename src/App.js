@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 import { Route, Switch } from 'react-router-dom'
+import Welcome from './Welcome';
 import Home from './Home';
 import CurrentIssues from './CurrentIssues';
 import IssueCommentAmount from './IssueCommentAmount';
@@ -28,6 +29,9 @@ class App extends Component {
 		return (
 			<Switch>
 				<Route exact path='/' render={() => (
+					<Welcome />
+				)} />
+				<Route exact path='/Home' render={() => (
 					<Home />
 				)} />
 				<Route exact path='/CurrentIssues' render={() => (

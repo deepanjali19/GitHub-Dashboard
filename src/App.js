@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import IssueLabel from './components/repo-issues/IssueLabel';
 import LanguageList from './components/lang-list/LanguageList';
+import TopLanguage from './components/top-lang/TopLanguage';
 import PieChart from './components/pie-chart/PieChart';
 import RepoRecentActivity from './components/repo-activity/RepoRecentActivity';
 import UserRecentActivities from './components/user-activity/UserRecentActivities';
@@ -31,6 +32,9 @@ class App extends Component {
 				)} />
 				<Route exact path='/LanguageList' render={() => (
 					<LanguageList />
+				)} />
+				<Route exact path='/TopLanguage' render={() => (
+					<TopLanguage />
 				)} />
 				<Route exact path='/PieChart' render={() => (
 					<PieChart />

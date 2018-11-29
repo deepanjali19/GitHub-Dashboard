@@ -1,15 +1,33 @@
-.navbar-nav > li > a {
-    padding-top:25px; 
-    padding-bottom:25px;
+.welcome-navbar-header{
+    padding-top: 4px
 }
-  
+
 .navbar {
-    min-height:50px
+    min-height:60px
 }
   
-#dashboard{
+#welcome-dashboard{
     font-size: 20px;
     vertical-align: middle;
-    color: green;
-    padding-left: 20px;
+    color: white;
+    padding-left: 16px;
+}
+
+.navbar-left{
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.welcome-img{
+    padding-left: 100px;
+}
+
+.welcome-text{
+    float: right;
+    padding-right:150px;
+    padding-top: 90px;
+}
+
+.welcome-container{
+    padding-top: 100px;
 }

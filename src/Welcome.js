@@ -10,33 +10,31 @@ class Welcome extends React.Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-inverse">
+                <nav className="welcome-navbar navbar-inverse">
                     <div className="container-fluid">
-                        <div className="navbar-header">
-                            <a href="#" className="navbar-left"><img src={WelcomeLogo} height="50" alt="Welcome Logo" /></a>
+                        <div className="welcome-navbar-header">
+                            <a href="#" className="navbar-left"><img src={WelcomeLogo} height="40" alt="Welcome Logo" /></a>
                             <a className="navbar-brand" href="#">
-                                <span id="dashboard">GitHub-Dashboard</span>
+                                <span id="welcome-dashboard">GitHub-Dashboard</span>
                             </a>
                         </div>
                     </div>
                 </nav>
 
-                <div className="container">
-                    <div className="row">
-                        <a href="#" className="navbar-left"><img src={WelcomeImage} height="400" alt="Welcome" /></a>
-                        <h3>Explore your GitHub stats</h3>
-                        <p> Track your GitHub activity in detail and watch statistics about your
-                            pull requests, issues, starred and forked repositories. Login to check out the details.
-                        </p>
-                        <div className="col-md-6">
+                <div className="welcome-container">
+                    <div className="welcome-row">
+                        <a href="#" className="welcome-img"><img src={WelcomeImage} height="380" alt="Welcome" /></a>
+                        <div className="welcome-text">
+                            <h3>Explore your GitHub stats</h3>
+                            <p> Track your GitHub activity in detail and watch statistics about your pull requests, <br></br>
+                                issues, starred and forked repositories. Login to check out the details.
+                        </p><br></br>
                             <ul className='nav navbar-nav navbar-right'>
-                                <li><a href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`} target="_blank" rel="noopener noreferrer"><span className="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
+                                <li><a id="WelGitLink" href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`} target="_blank" rel="noopener noreferrer"><span className="glyphicon glyphicon-log-in"></span> Login to GitHub</a></li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         );
     }

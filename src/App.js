@@ -4,16 +4,13 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Welcome from './Welcome';
 import Home from './Home';
-import CurrentIssues from './CurrentIssues';
-import IssueCommentAmount from './IssueCommentAmount';
-import IssueLabel from './IssueLabel';
-import LanguageList from './LanguageList';
-import PieChart from './PieChart';
-import RelatingComments from './RelatingComments';
-import RepoRecentActivity from './RepoRecentActivity';
-import TotalStars from './TotalStars';
-import UserRecentActivities from './UserRecentActivities';
-
+import IssueLabel from './components/repo-issues/IssueLabel';
+import LanguageList from './components/lang-list/LanguageList';
+import TopLanguage from './components/top-lang/TopLanguage';
+import PieChart from './components/pie-chart/PieChart';
+import RepoRecentActivity from './components/repo-activity/RepoRecentActivity';
+import UserRecentActivities from './components/user-activity/UserRecentActivities';
+import UserOverview from './components/user-info/UserOverview';
 
 class App extends Component {
 	
@@ -34,32 +31,26 @@ class App extends Component {
 				<Route exact path='/Home' render={() => (
 					<Home />
 				)} />
-				<Route exact path='/CurrentIssues' render={() => (
-					<CurrentIssues />
-				)} />
-				<Route exact path='/IssueCommentAmount' render={() => (
-					<IssueCommentAmount />
-				)} />
 				<Route exact path='/IssueLabel' render={() => (
 					<IssueLabel />
 				)} />
 				<Route exact path='/LanguageList' render={() => (
 					<LanguageList />
 				)} />
+				<Route exact path='/TopLanguage' render={() => (
+					<TopLanguage />
+				)} />
 				<Route exact path='/PieChart' render={() => (
 					<PieChart />
-				)} />
-				<Route exact path='/RelatingComments' render={() => (
-					<RelatingComments />
 				)} />
 				<Route exact path='/RepoRecentActivity' render={() => (
 					<RepoRecentActivity />
 				)} />
-				<Route exact path='/TotalStars' render={() => (
-					<TotalStars />
-				)} />
 				<Route exact path='/UserRecentActivities' render={() => (
 					<UserRecentActivities />
+				)} />
+				<Route exact path='/UserOverview' render={() => (
+					<UserOverview />
 				)} />
 				<Route render={() => (
 						<h1>Not Found</h1>

@@ -1,0 +1,21 @@
+.user-info .media {
+  width: 500px;
+  margin: auto;
+}
+
+.user-info img {
+  width: 150px;
+}
+
+.user-info .media-body {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.user-info ul {
+  list-style: none;
+}
+
+.user-info li {
+  margin-bottom: 10px;
+}

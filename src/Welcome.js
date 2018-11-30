@@ -23,7 +23,7 @@ class Welcome extends React.Component {
 
                 <div className="welcome-container">
                     <div className="welcome-row">
-                        <a href="#" className="welcome-img"><img src={WelcomeImage} height="380" alt="Welcome" /></a>
+                        <img src={WelcomeImage} height="380" alt="Welcome" className="welcome-img" />
                         <div className="welcome-text">
                             <h3>Explore your GitHub stats</h3>
                             <p> Track your GitHub activity in detail and watch statistics about your pull requests, <br></br>

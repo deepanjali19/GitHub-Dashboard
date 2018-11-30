@@ -75,4 +75,14 @@ export default class API {
 
     return langs.sort((a, b) => b.count - a.count);
   }
+
+  // Get basic user information
+  async getUserInfo() {
+    let { data: { login, avatar_url, created_at } } = await octokit.users.get();
+    let { data: { length: nStars } } = await octokit.activity.getStarredRepos();
+    let { data: { total_count: nIssues } } = await octokit.search.issues({ q: `type:issue+author:${login}` });
+    let { data: { total_count: nPRs } } = await octokit.search.issues({ q: `type:pr+author:${login}` });
+
+    return { avatar_url, created_at, nIssues, nPRs, nStars };
+  }
 }

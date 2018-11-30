@@ -9,7 +9,7 @@ import TopLanguage from './components/top-lang/TopLanguage';
 import PieChart from './components/pie-chart/PieChart';
 import RepoRecentActivity from './components/repo-activity/RepoRecentActivity';
 import UserRecentActivities from './components/user-activity/UserRecentActivities';
-
+import UserOverview from './components/user-info/UserOverview';
 
 class App extends Component {
 	
@@ -44,6 +44,9 @@ class App extends Component {
 				)} />
 				<Route exact path='/UserRecentActivities' render={() => (
 					<UserRecentActivities />
+				)} />
+				<Route exact path='/UserOverview' render={() => (
+					<UserOverview />
 				)} />
 				<Route render={() => (
 						<h1>Not Found</h1>

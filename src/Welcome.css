@@ -1,33 +1,21 @@
-.welcome-navbar-header{
-    padding-top: 4px
-}
 
-.navbar {
-    min-height:60px
-}
-  
-#welcome-dashboard{
+#dashboard{
     font-size: 20px;
     vertical-align: middle;
     color: white;
     padding-left: 16px;
 }
 
-.navbar-left{
-    padding-top: 2px;
-    padding-left: 5px;
-}
-
-.welcome-img{
+.img{
     padding-left: 100px;
 }
 
-.welcome-text{
+.text{
     float: right;
     padding-right:150px;
     padding-top: 90px;
 }
 
-.welcome-container{
+.container{
     padding-top: 100px;
 }

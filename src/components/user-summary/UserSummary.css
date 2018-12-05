@@ -1,0 +1,21 @@
+
+.user-summary {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.login-text {
+   color: white;
+   width: 50px;
+   font-weight: bold;
+   margin-right: 30px;
+}
+
+.icon {
+   height: 50px;
+   width:50px;
+   background-color: grey;
+   border: 1px solid white;
+}

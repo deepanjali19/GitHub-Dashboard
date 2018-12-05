@@ -85,4 +85,9 @@ export default class API {
 
     return { avatar_url, created_at, nIssues, nPRs, nStars };
   }
+  
+  async getUserSummary() {
+    let { data: { login, avatar_url } } = await octokit.users.get();
+    return { login, avatar_url };
+  }
 }

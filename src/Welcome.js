@@ -38,7 +38,9 @@ class Welcome extends React.Component {
                             href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`} 
                             target="_blank" 
                             rel="noopener noreferrer">
-                              <span> Login with GitHub </span>
+                              <button type="button" class="btn btn-default">
+                                <span className="glyphicon glyphicon-log-in"></span> Login with GitHub
+                              </button>
                           </a>
                         </div>
                     </div>

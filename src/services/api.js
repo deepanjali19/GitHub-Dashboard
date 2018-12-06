@@ -32,7 +32,7 @@ export default class API {
       body: JSON.stringify({
         client_id: '',
         client_secret: '',
-        code: '7d323bb09c9a878eb1a2'
+        code: code,
       })
     }).then((response)=>{
       console.log("INSIDE THE GETTOKEN");

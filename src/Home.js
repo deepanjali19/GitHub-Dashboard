@@ -2,12 +2,20 @@ import React from 'react';
 import GitHubImage from './img/GitHub.png';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import API from './services/api'
 
 //const CLIENT_ID = 'c6b85184ff709b73b677'
 //const REDIRECT_URI = 'http://localhost:3000/'
 
 class Home extends React.Component {
+    constructor(props){
+        super(props);
+    }
     render() {
+        let api = new API();
+        let code = window.location.href.split("=")[1];
+        let p = api.getToken(code).then((response)=>{console.log(response);});
+        
         return (
             <div>
                 <nav className="navbar navbar-inverse">

@@ -21,7 +21,25 @@ octokit.authenticate({
 })
 
 export default class API {
+  async getToken(code: string){
+    console.log(code);
+    fetch('https://github.com/login/oauth/access_token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+        
+      },
+      body: JSON.stringify({
+        client_id: '',
+        client_secret: '',
+        code: '7d323bb09c9a878eb1a2'
+      })
+    }).then((response)=>{
+      console.log("INSIDE THE GETTOKEN");
+      console.log(response);
+    });
 
+  }
   //returns 30 most recent events in given repo
   async getRecentRepoActivity(owner: string, repo: string) {
     const result = await octokit.activity.getEventsForRepo({ owner, repo });

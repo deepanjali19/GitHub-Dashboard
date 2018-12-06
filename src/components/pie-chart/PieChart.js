@@ -7,23 +7,36 @@ class PieChart extends React.Component {
             data: [5,12,8,3,10]
         }
     }
-
+    componentDidMount() {
+        //this.setState({ langs });
+    }
     render() {
-        var colors = ['#43A19E', '#7B43A1', '#F2317A', '#FF9824', '#58CF6C', '#58CF6C', '#58CF6C', '#58CF6C'];
+        var colors = ['#43A19E', '#7B43A1', '#F2317A', '#FF9824', '#58CF6C', '#58CF6C', '#58CF6C', '#F2T17A'];
+        let pie;
+            if(this.props.langs.length > 0){
+                pie =             
+                    <div>
+                        <h1>Display a pie chart showing a distribution of languages the user worked with based off the repositories they have</h1>
+                        <Pie
+                            data={ this.props.langs }
+                            radius={ 150 }
+                            hole={ 50 }
+                            colors={ colors }
+                            labels={ true }
+                            percent={ true }
+                            strokeWidth={ 3 }
+                            stroke={ '#fff' }
+                        />
+                    </div>  
+            }
+            else{
+                pie = <h1>No languages found</h1>;
+            }
         return(
             <div>
-                <h1>Display a pie chart showing a distribution of languages the user worked with based off the repositories they have</h1>
-                <Pie
-                    data={ this.state.data }
-                    radius={ 150 }
-                    hole={ 50 }
-                    colors={ colors }
-                    labels={ true }
-                    percent={ true }
-                    strokeWidth={ 3 }
-                    stroke={ '#fff' }
-			    />
+                {pie}
             </div>
+
         );
     }
 }
@@ -49,23 +62,28 @@ class Pie extends React.Component{
         self = this,
         sum, startAngle, d = null;
 
-        sum = this.props.data.reduce(function (carry, current) { return carry + current }, 0);
+        sum = this.props.data.reduce(function (carry, current) { return carry + current.count }, 0);
         startAngle = 0;
-
+        console.log("Props");
+        console.log(this.props.data);
 
         return (
             <svg width={ diameter } height={ diameter } viewBox={ '0 0 ' + diameter + ' ' + diameter } xmlns="http://www.w3.org/2000/svg" version="1.1">
                 { this.props.data.map(function (slice, sliceIndex) {
+                    console.log("Slice");
+                    console.log(slice);
+                    console.log("Index");
+                    console.log(sliceIndex);
                     var angle, nextAngle, percent;
 
                     nextAngle = startAngle;
-                    angle = (slice / sum) * 360;
-                    percent = (slice / sum) * 100;
+                    angle = (slice.count / sum) * 360;
+                    percent = (slice.count / sum) * 100;
                     startAngle += angle;
 
                     return <Slice
                         key={ sliceIndex }
-                        value={ slice }
+                        value={ slice.count }
                         percent={ self.props.percent }
                         percentValue={ percent.toFixed(1) }
                         startAngle={ nextAngle }

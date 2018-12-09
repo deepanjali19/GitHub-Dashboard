@@ -31,7 +31,7 @@ class LanguageList extends React.Component {
                         )}
                     </Panel.Body>
                 </Panel>
-                <PieChart langs={this.state.langs}/>
+                <PieChart data={this.state.langs}/>
             </div>
         );
     }

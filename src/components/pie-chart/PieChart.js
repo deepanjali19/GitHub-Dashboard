@@ -1,24 +1,34 @@
 import React from 'react';
-
+import './PieChart.css'
 class PieChart extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            data: [5,12,8,3,10]
-        }
-    }
-    componentDidMount() {
-        //this.setState({ langs });
     }
     render() {
         var colors = ['#43A19E', '#7B43A1', '#F2317A', '#FF9824', '#58CF6C', '#58CF6C', '#58CF6C', '#F2T17A'];
-        let pie;
-            if(this.props.langs.length > 0){
-                pie =             
-                    <div>
-                        <h1>Display a pie chart showing a distribution of languages the user worked with based off the repositories they have</h1>
+        let pieChart;
+        let pieData;
+        let page = window.location.href.split("/");
+        if(page[page.length-1] == "PieChart"){
+            pieData =
+                [
+                    {'name' : "5", 'count': 5},
+                    {'name' : "12", 'count': 12},
+                    {'name' : "8", 'count': 8},
+                    {'name' : "3", 'count': 3},
+                    {'name' : "10", 'count': 10}
+                ]
+        }
+        else{
+            pieData = this.props.data;
+        }
+            if(pieData.length > 0){
+                pieChart =     
+                <div>
+                    <h1>Display a pie chart showing a distribution of languages the user worked with based off the repositories they have</h1>
+                    <div class='col-md-2'>
                         <Pie
-                            data={ this.props.langs }
+                            data={ pieData }
                             radius={ 150 }
                             hole={ 50 }
                             colors={ colors }
@@ -27,18 +37,47 @@ class PieChart extends React.Component {
                             strokeWidth={ 3 }
                             stroke={ '#fff' }
                         />
-                    </div>  
+                    </div>
+                    <Legend 
+                            data = {pieData}
+                            colors = {colors}
+                        />  
+                </div>        
             }
             else{
-                pie = <h1>No languages found</h1>;
+                pieChart = <h1>No languages found</h1>;
             }
         return(
             <div>
-                {pie}
+                {pieChart}
             </div>
 
         );
     }
+}
+class Legend extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        let labels = [];
+        this.props.data.forEach((data, index) =>{
+            labels.push(
+                <div style={{marginTop:10}}>
+                    <div class='label child' style={{backgroundColor: this.props.colors[index]}}>
+                        {data.name}
+                    </div>
+                </div>
+            );
+        });
+        return(
+            <div  class='container col-md-4'>
+                {labels}
+            </div>
+        );
+    }
+
 }
 function getAnglePoint(startAngle, endAngle, radius, x, y) {
 	var x1, y1, x2, y2;
@@ -61,19 +100,12 @@ class Pie extends React.Component{
         diameter = radius * 2,
         self = this,
         sum, startAngle, d = null;
-
         sum = this.props.data.reduce(function (carry, current) { return carry + current.count }, 0);
         startAngle = 0;
-        console.log("Props");
-        console.log(this.props.data);
 
         return (
             <svg width={ diameter } height={ diameter } viewBox={ '0 0 ' + diameter + ' ' + diameter } xmlns="http://www.w3.org/2000/svg" version="1.1">
                 { this.props.data.map(function (slice, sliceIndex) {
-                    console.log("Slice");
-                    console.log(slice);
-                    console.log("Index");
-                    console.log(sliceIndex);
                     var angle, nextAngle, percent;
 
                     nextAngle = startAngle;

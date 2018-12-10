@@ -16,7 +16,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 [Fork](https://help.github.com/articles/fork-a-repo/) and [clone](https://help.github.com/articles/cloning-a-repository/) the repository onto your computer.
-Then run the following commands to get the app working locally on your machine:
+
+[Generate a github API access_token](https://github.com/settings/tokens) with repo permissions (but generate a new key with more permissions if the situation calls for it) and put that key in `config.json`. Then run the following commands to get the app working locally on your machine:
 
 ```
 npm install
@@ -25,18 +26,18 @@ npm start
 
 This will build the project and automatically start the development server on [http://localhost:3000](http://localhost:3000).
 
-## Contributing
+For more information, see [CONTRIBUTING.md](https://github.com/deepanjali19/GitHub-Dashboard/blob/master/CONTRIBUTING.md)
 
-New contributors are always welcome!
-
-Need to contact other collaborators in this project? Feel free to [join our slack group!](https://join.slack.com/t/githubdashboard/shared_invite/enQtNDcxMTM5OTMyNjExLWFmYTE1NTFiMzkyMzU0ZmRjMjI0YjI1OTVkMDk0MTUyZmJlMjM2NGUzODQ1YjZmZDVkMzkxYzgzYjM1MjI1ZGI) 
-
-## Liscense
+## License
 
 This project is licensed under the MIT License - see our [LICENSE.md](https://github.com/deepanjali19/GitHub-Dashboard/blob/master/LICENSE) file for details
 
 ## V1 Features
 A list of features we want to have completed for this first version of the project. If you think of anything feel free to add it, or bring up any concerns about existing features in our [slack](https://githubdashboard.slack.com) group or in a new [issue](https://github.com/deepanjali19/GitHub-Dashboard/issues/new).
+
+![](https://thumbs.gfycat.com/FlawedAdorableEasternnewt-size_restricted.gif)
+
+Above is an early prototype of the project. To view project mockups click [here](https://imgur.com/a/UsBGvEJ).
 
 ### General Features
 More general features present throughout the application

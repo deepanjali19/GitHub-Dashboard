@@ -2,7 +2,7 @@ import React from 'react';
 import { Panel } from 'react-bootstrap'
 import API from '../../services/api'
 import './TopLanguage.css'
-
+import { NavBar } from '../NavBar'
 class LanguageList extends React.Component {
     constructor() {
         super();
@@ -19,14 +19,17 @@ class LanguageList extends React.Component {
 
     render() {
         return (
-            <Panel>
-                <Panel.Heading>
-                    <Panel.Title>Most Used Language</Panel.Title>
-                </Panel.Heading>
-                <Panel.Body>
-                    <i id='top-lang-icon' className={this.state.icon} />
-                </Panel.Body>
-            </Panel>
+			<div>
+				<NavBar />
+				<Panel>
+					<Panel.Heading>
+						<Panel.Title>Most Used Language</Panel.Title>
+					</Panel.Heading>
+					<Panel.Body>
+						<i id='top-lang-icon' className={this.state.icon} />
+					</Panel.Body>
+				</Panel>
+			</div>
         );
     }
 }

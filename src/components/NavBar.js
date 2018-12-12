@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 export const NavBar = () => (
 		<nav className="navbar navbar-inverse">
                     <div className="container-fluid">

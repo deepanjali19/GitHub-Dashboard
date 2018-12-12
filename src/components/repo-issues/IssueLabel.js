@@ -1,7 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import API from '../../services/api.js';
-
+import { NavBar } from '../NavBar'
 class IssueLabel extends React.Component {
   
   constructor() {
@@ -72,21 +72,24 @@ class IssueLabel extends React.Component {
     render() {
       
       return(
-        <div className="container">
-          <div className="row">
-            <h3>Displaying issues in <b>{this.state.repoTitle}</b> that match the following labels:</h3>
-            <h4>{this.state.labels}</h4>
-          </div>
-          <div className="row">
-            <div className="col s12 board">
-              <table className="table">
-                 <tbody>
-                   {this.state.rows}
-                 </tbody>
-               </table>
-            </div>
-          </div>
-        </div>
+		<div>
+			<NavBar />
+			<div className="container">
+				<div className="row">
+					<h3>Displaying issues in <b>{this.state.repoTitle}</b> that match the following labels:</h3>
+					<h4>{this.state.labels}</h4>
+				</div>
+				<div className="row">
+					<div className="col s12 board">
+						<table className="table">
+							<tbody>
+								{this.state.rows}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
       );
 
     }

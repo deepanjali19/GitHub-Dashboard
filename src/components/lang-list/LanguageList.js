@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button, Badge, Panel } from 'react-bootstrap'
 import API from '../../services/api'
 import './LanguageList.css'
-
+import { NavBar } from '../NavBar'
 class LanguageList extends React.Component {
     constructor() {
         super();
@@ -17,6 +18,8 @@ class LanguageList extends React.Component {
 
     render() {
         return (
+		<div>
+            <NavBar />   
             <Panel>
                 <Panel.Heading>
                     <Panel.Title>Languages Used</Panel.Title>
@@ -29,6 +32,7 @@ class LanguageList extends React.Component {
                     )}
                 </Panel.Body>
             </Panel>
+			</div>
         );
     }
 }
